@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 90%; max-width: 800px; margin: auto; }
+        .header, .footer { padding: 20px; text-align: center; background: #f4f4f4; }
+        .payment-section { margin: 20px 0; padding: 15px; background: #f9f9f9; border-radius: 5px; }
+        .order-summary, .payment-method, .total-section { padding: 10px; }
+        .btn { padding: 10px 15px; background: #007bff; color: #fff; border: none; cursor: pointer; }
+        .btn:hover { background: #0056b3; }
+        .upi-options { display: none; margin-top: 15px; }
+        .upi-button { padding: 10px 15px; margin: 5px; background: #007bff; color: #fff; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <h2>Checkout</h2>
+    </div>
+
+    <!-- Order Summary -->
+    <div class="payment-section order-summary">
+        <h3>Order Summary</h3>
+        <p>Items: $100.00</p>
+        <p>Discount: -$10.00</p>
+        <p>Delivery Charges: $5.00</p>
+        <p>Total: $95.00</p>
+    </div>
+
+    <!-- Delivery Address -->
+    <div class="payment-section">
+        <h3>Delivery Address</h3>
+        <p>John Doe</p>
+        <p>1234 Elm Street, Apt 567</p>
+        <p>City, State, ZIP</p>
+        <button class="btn">Edit Address</button>
+    </div>
+
+    <!-- Payment Method -->
+    <div class="payment-section payment-method">
+        <h3>Payment Method</h3>
+        <label>
+            <input type="radio" name="payment" value="card" checked> Credit/Debit Card
+        </label><br>
+        <label>
+            <input type="radio" name="payment" value="upi"> UPI
+        </label><br>
+        <label>
+            <input type="radio" name="payment" value="netbanking"> Net Banking
+        </label><br>
+        <label>
+            <input type="radio" name="payment" value="cod"> Cash on Delivery
+        </label>
+    </div>
+
+    <!-- UPI Options -->
+    <div class="upi-options" id="upiOptions">
+        <h3>Select UPI App</h3>
+        <a href="gpay.html" class="upi-button" target="_blank">Google Pay</a>
+        <a href="paytm.html" class="upi-button" target="_blank">Paytm</a>
+        <a href="phonepe.html" class="upi-button" target="_blank">PhonePe</a>
+    </div>
+      <br>
+    <!-- Confirm Button -->
+  <!---  <div class="total-section">
+        <a  href="order.html">
+        <button class="btn" style="color: #fff;">Confirm & Pay $95.00</a></button>
+    </div>-->
+    <a href="order.html">
+        <button class="btn">Confirm & Pay $95.00</button></a>
+    
+    
+
+    <!-- Footer -->
+    <div class="footer">
+        <p >Need help? Contact our <a href="home.html">support team.</a></p>
+    </div>
+</div>
+
+<script>
+    // Get the radio buttons for payment and the UPI options div
+    const paymentMethods = document.querySelectorAll('input[name="payment"]');
+    const upiOptions = document.getElementById('upiOptions');
+
+    // Show UPI options if UPI is selected
+    paymentMethods.forEach(method => {
+        method.addEventListener('change', () => {
+            if (method.value === 'upi' && method.checked) {
+                upiOptions.style.display = 'block';
+            } else {
+                upiOptions.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

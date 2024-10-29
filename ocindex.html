@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Occasion Reminder</title>
+    <link rel="stylesheet" href="ocstyle.css">
+</head>
+<body>
+    <div class="container">
+        <h2 style="color:white">Set Occasion Reminder for Shopping</h2>
+        <form id="reminderForm" method="POST" action="save_reminder.php">
+            <label style="color:white"for="occasionName">Occasion Name:</label>
+            <input type="text" id="occasionName" name="occasionName" required>
+
+            <label style="color:white"for="occasionDate">Occasion Date:</label>
+            <input type="date" id="occasionDate" name="occasionDate" required>
+
+            <label style="color:white" for="occasionTime">Occasion Time:</label>
+            <input type="time" id="occasionTime" name="occasionTime" required>
+
+            <label style="color:white" for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label style="color:white" for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <button type="submit">Set Reminder</button>
+            <br>
+            <p class="credit" style="color:white">Copyrights to <a target="_blank" href="home.html">BlossomBazaar</a></p>
+
+            </div>
+
+        </form>
+    </div>
+    <script src="ocscript.js"></script>
+</body>
+</html>
