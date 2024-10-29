@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Bundle Selector</title>
+    <link rel="stylesheet" href="giftstyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="product-list">
+            <h2 style="color: aliceblue;">Combo Offer Products</h2>
+            <div class="product" data-name="Product 1" data-price="10">
+                <img src="images/img4.png" alt="Product 1">
+                <h3 style="color: aliceblue;">Product 1</h3>
+                <p style="color: aliceblue;">Price:  ₹10</p>
+                <button class="add-button">Add</button>
+            </div>
+            <div class="product" data-name="Product 2" data-price="15">
+                <img src="images/img7.png" alt="Product 2">
+                <h3 style="color: aliceblue;">Product 2</h3>
+                <p style="color: aliceblue;">Price:  ₹15</p>
+                <button class="add-button">Add</button>
+            </div>
+            <div class="product" data-name="Product 3" data-price="20">
+                <img src="images/img8.png" alt="Product 3">
+                <h3 style="color: aliceblue;">Product 3</h3>
+                <p style="color: aliceblue;">Price:  ₹20</p>
+                <button class="add-button">Add</button>
+            </div>
+        </div>
+
+        <div class="selected-products">
+            <h2 style="color: aliceblue;">Selected Products</h2>
+            <div class="card" id="selected-1"></div>
+            <div class="card" id="selected-2"></div>
+            <button id="add-to-cart" disabled>Add to Cart</button>
+            <br>
+            <div id="total-cost" style="color:aliceblue;"><strong>Total Cost:  ₹0</strong></div>
+            <a href="home.html">
+                <button class="login-btn">Back</button></a>
+        </div>
+    </div>
+
+    <script src="giftscript.js"></script>
+</body>
+</html>
